@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}homepage{% endblock %}
+
+{% block content %}
+<center>
+            <section class="vh-100" style="background-image: url('{% static 'img/IMG_6452.JPG' %}')">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black bg-dark bg-gradient" style="border-radius: 25px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+<h1 class="text-warning">Add Service</h1>
+<br/><br/>
+{% if submitted %}
+    You have added a new Service!
+
+{% else %}
+
+    <form action="" method=POST>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input  type="submit" value="Submit" class="btn btn-success">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </form>
+{% endif %}
+</center>
+{% endblock %}

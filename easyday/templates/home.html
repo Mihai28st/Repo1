@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}homepage{% endblock %}
+
+{% block content %}
+<center>
+<h1 class="text-warning">Welcome to Apointments!</h1>
+    <br><br><br><br><br><br><br><br>
+    <h1 class="text-warning">This app is meant to <br> help you organise your busy schedule.</h1>
+</center>
+{% if request.user.is_authenticated %}
+{% endif %}
+{% endblock %}
